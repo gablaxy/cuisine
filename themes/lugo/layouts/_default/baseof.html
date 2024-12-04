@@ -6,7 +6,7 @@
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='{{ "index.xml" | relURL }}'>
 	<link rel='stylesheet' type='text/css' href='{{ "style.css" | relURL }}'>
 	{{ with .Site.Params.favicon }}
-		<link rel="icon" href="{{ favicon.ico | relURL }}">
+		<link rel="icon" href='{{ "favicon.ico" | relURL }}'>
 	{{ end -}}
 	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
