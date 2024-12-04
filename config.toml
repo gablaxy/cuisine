@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "fr"
+title = "NB Cuisine"
+theme = 'lugo'

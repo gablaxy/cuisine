@@ -1,0 +1,302 @@
+:root{
+    --background : #292929;
+
+	--liens: #979797;
+	--sous-titres: #996666;
+	--h1: #CC9966;
+	--texte: #CCCCCC;
+}
+
+
+body {
+	background: var(--background);
+	color: var(--h1);
+	max-width: 850px;
+	margin: auto;
+	padding: 0 16px;
+	margin-bottom: 500px;
+	scrollbar-color: gray var(--background);
+
+	font-family: monospace;
+	font-size: 20px;
+	line-height: calc(1ex / 0.32);
+	font-style: normal;
+}
+
+::-webkit-scrollbar {
+	width: .66vw;
+	background-color: var(--background);
+}
+::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 5px;
+}
+
+a {
+	color: var(--liens);
+	text-decoration: none;
+}
+
+#tagcloud {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+
+#tagcloud li {
+	display: inline-block;
+}
+
+#tagcloud a {
+	margin: .1em .25em;
+}
+
+a:hover {
+	color: var(--sous-titres);
+	text-decoration: underline;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	color: var(--sous-titres) ;
+	text-align: center ;
+}
+
+h3 {
+	color: var(--sous-titres) ;
+	margin: 0;
+}
+
+pre{
+	border-style: solid;
+	border-width: 0px 0px 2px 0px;
+	padding-bottom : 1em;
+	text-align: center;
+}
+
+footer {
+	text-align: center ;
+	border-style: solid ;
+	border-width: 2px 0px 0px 0px ;
+	padding: 1em ;
+}
+
+img {
+	max-width: 90% ;
+	max-height: 400px ;
+	margin: auto ;
+	display: block ;
+}
+
+code {
+	overflow-wrap: break-word ;
+	color: lime ;
+}
+
+.taglist {
+	text-align: center ;
+	margin-bottom: 2em ;
+	margin-top: 2em ;
+}
+
+img[alt="BTC Logo"],
+img[alt="ETH Logo"],
+img[alt="XMR Logo"] {
+	max-width: 1em ;
+	max-height: 1em ;
+	display: inline ;
+}
+
+@media (pointer: coarse) {
+	li > a {
+	    display: inline-block;
+		padding: 0.2em 0;
+	}
+}
+
+@media print {
+	a[href] {
+		text-decoration: none ;
+		color: black ;
+	}
+
+	footer,.taglist { display: none ; }
+
+	body {
+		margin: 0;
+	}
+
+
+}
+
+article{
+	color : var(--texte);
+}
+
+.older-article {
+	display: none ;
+}
+
+.hidden {
+	display: none !important ;
+}
+
+#artlist {
+	font-size: large ;
+}
+
+#artlist li {
+	padding: .25em ;
+}
+
+@media (min-width: 55em) {
+	#artlist { column-count: 2 ;}
+}
+
+@media (min-width: 100em) {
+	#artlist { column-count: 3 ;}
+}
+
+
+input#search {
+  all: unset;
+  background: #3C3E44;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.search {
+  width: 400px;
+  height: 41px;
+  font-size: 16px;
+  max-width: 85vw;
+  position: relative;
+  margin: 0.5rem auto 1.2rem;
+  display: flex;
+}
+
+button#clear-search {
+  all: unset;
+  position: absolute;
+  right: 4px;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  color: #888;
+  cursor: pointer;
+  transition: color 180ms ease-in-out;
+}
+button#clear-search:hover {
+  color: #eee;
+}
+
+
+.matched-recipe {
+	font-size: x-large ;
+	display: list-item !important ;
+}
+
+.list-searched {
+	column-count: 1 !important ;
+	list-style: decimal ;
+	max-width: 600px ;
+	margin: auto ;
+}
+
+.qr {
+    max-height: 150px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.js-only { display: none ; }
+
+#tag_alcool:before { content: "🍸" ;}
+#tag_américain:before { content: "🇺🇸" ; }
+#tag_avocat:before { content: "🥑" ; }
+#tag_banane:before { content: "🍌" ; }
+#tag_bière:before { content: "🍺" ; }
+#tag_bolivien:before { content: "🇧🇴" ; }
+#tag_dips:before { content: "🥣" ; }
+#tag_salé:before { content: "🧂" ; }
+#tag_pommes:before { content: "🍎" ; }
+#tag_argentin:before { content: "🇦🇷" ; }
+#tag_asiatique:before { content: "🥢" ; }
+#tag_australien:before { content: "🇦🇺" ;}
+#tag_autrichien:before { content: "🇦🇹" ;}
+#tag_chocolat:before { content: "🍫" ;}
+#tag_bacon:before { content: "🥓" ; }
+#tag_boeuf:before { content: "🐄" ; }
+#tag_belge:before { content: "🇧🇪" ; }
+#tag_brésilien:before { content: "🇧🇷" ; }
+#tag_pain:before { content: "🍞" ;}
+#tag_petit_déjeuner:before { content: "🌅" ;}
+#tag_brocoli:before { content: "🥦" ;}
+#tag_gâteau:before { content: "🍰" ; }
+#tag_fromage:before { content: "🧀" ; }
+#tag_poulet:before { content: "🐔" ;}
+#tag_chinois:before { content: "🐉" ; }
+#tag_chocolat:before { content: "🍫" ; }
+#tag_noel:before { content: "🎄" ; }
+#tag_biscuits:before { content: "🍪" ;}
+#tag_maïs:before { content: "🌽" ;}
+#tag_curry:before { content: "🍛" ; }
+#tag_dessert:before { content: "🍮" ; }
+#tag_dominicain:before { content: "🇩🇴" ;}
+#tag_boisson:before { content: "🍹" ;}
+#tag_canard:before { content: "🦆" ; }
+#tag_dumpling:before { content: "🥟" ;}
+#tag_hollandais:before { content: "🇳🇱" ;}
+#tag_oeufs:before { content: "🥚" ; }
+#tag_poisson:before { content: "🐟" ; }
+#tag_français:before { content: "🇫🇷" ; }
+#tag_fruit:before { content: "🍇" ; }
+#tag_allemand:before { content: "🇩🇪" ; }
+#tag_grec:before { content: "🇬🇷" ; }
+#tag_indien:before { content: "🇮🇳" ; }
+#tag_irelandais:before { content: "🇮🇪" ; }
+#tag_italien:before { content: "🇮🇹" ; }
+#tag_japonais:before { content: "🇯🇵" ; }
+#tag_libanais:before { content: "🇱🇧" ; }
+#tag_citrons:before { content: "🍋" ;}
+#tag_liqueur:before { content: "🥃" ;}
+#tag_bento:before { content: "🍱" ; }
+#tag_méxicain:before { content: "🇲🇽" ; }
+#tag_lait:before { content: "🥛" ; }
+#tag_champignons:before { content: "🍄" ;}
+#tag_pancake:before { content: "🥞" ; }
+#tag_pâtes:before { content: "🍝" ;}
+#tag_patisserie:before { content: "🧁" ;}
+#tag_tarte:before { content: "🥧" ;}
+#tag_pizza:before { content: "🍕" ; }
+#tag_porc:before { content: "🐖" ;}
+#tag_portuguais:before { content: "🇵🇹" ;}
+#tag_patates:before { content: "🥔" ; }
+#tag_québec:before { content: "⚜️" ; }
+#tag_rapide:before { content: "🏃" ; }
+#tag_cru:before { content: "🍖" ;}
+#tag_riz:before { content: "🍚" ; }
+#tag_russe:before { content: "🇷🇺" ;}
+#tag_salade:before { content: "🥗" ;}
+#tag_sandwich:before { content: "🥪" ;}
+#tag_fruits-de-mer:before { content: "🦐" ; }
+#tag_soupe:before { content: "🍜" ;}
+#tag_espagnol:before { content: "🇪🇸" ; }
+#tag_épicé:before { content: "🌶️" ; }
+#tag_steak:before { content: "🥩" ; }
+#tag_sucré:before { content: "🍯" ; }
+#tag_suisse:before { content: "🇨🇭" ; }
+#tag_thaï:before { content: "🇹🇭" ;}
+#tag_tomates:before { content: "🍅" ;}
+#tag_dinde:before { content: "🦃" ; }
+#tag_vin:before { content: "🍷" ; }
+#tag_concombre:before { content: "🥒" ; }
+#tag_ail:before { content: "🧄" ; }
+#tag_oignons:before { content: "🧅" ; }
+#tag_carotte:before { content: "🥕" ; }
+#tag_salade:before { content: "🥬" ; }
