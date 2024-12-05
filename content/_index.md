@@ -4,9 +4,10 @@ description: 'The fast-loading recipe site with cooking only and no ads.'
 layout: single
 ---
 
+<!--
 ## Pour rechercher
 
-<!--
+
 <div class="search js-only">
   <input type="text" id="search" placeholder="Rechercher une recette...">
   <button id="clear-search">
